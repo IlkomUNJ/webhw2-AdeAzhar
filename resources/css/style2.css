@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Padding", sans-serif;
+}
+
+/* NAVIGATION */
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 7px;
+}
+
+.logo img{
+    width: 35%;
+    margin-left: 100px;
+    height: auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .menu{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu li{
+    list-style: none;
+}
+
+.navbar .menu li a{
+    margin-right: 65px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #103138;
+    text-decoration: none;
+}
+
+.navbar .menu button{
+    background-color: white;
+    margin-right: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px;
+}
+
+.navbar .menu button a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* NAVIGATION */
+
+/* CINEMA */
+
+.cinema{
+    margin: 0 auto;
+    max-width: 750px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.cinema h1{
+    font-weight: bold;
+    color: rgb(42, 42, 42);
+    margin-bottom: 20px;
+    font-size: 45px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+}
+
+.cinema .search-bar{
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.cinema .search-bar input{
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 17px;
+    padding-left: 10px;
+    color: grey;
+}
+
+.cinema .city-category{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.cinema .city-category a{
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin: 10px;
+}
+
+.cinema .city-category a:hover{
+    background-color: #103138;
+    color: white;
+}
+
+.cinema .cinema-list{
+    margin-top: 0.2px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}
+
+.cinema .cinema-list:hover, .cinema-list a:hover{
+    background-color: #103138;
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+.cinema .cinema-list .cinema-name{
+    line-height: 3;
+}
+
+.cinema .cinema-list .cinema-name .mall{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cinema .cinema-list .cinema-name .italic{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.cinema .cinema-list .cinema-name .bold{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.cinema .cinema-list a{
+    font-size: 18px;
+}
+
+/* CINEMA */
+
+/* FOOTER */
+
+footer{
+    background-color: #103138;
+    justify-content: space-between;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+footer span{
+    font-weight: bold;
+}
+
+footer .sosial{
+    display: flex;
+    gap: 20px;
+}
+
+footer .sosial a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+
+/* FOOTER */

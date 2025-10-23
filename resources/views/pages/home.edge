@@ -1,0 +1,251 @@
+@layout.app({title: 'TikerFlix - Home'})
+
+@slot('meta')
+  @vite('resources/css/style.css')
+
+@endslot
+
+@slot('main')
+  <main>
+    <!-- POSTER -->
+    <section>
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide1" src="images/promo1.png" alt="">
+                <img id="slide2" src="images/promo3.png" alt="">
+                <img id="slide3" src="images/promo4.png" alt="">
+                <img id="slide3" src="imagespromo5.png" alt="">
+                <img id="slide4" src="images/promo2.png" alt="">
+                <img id="slide5" src="images/promo6.png" alt="">
+            </div>
+
+            <div class="slider-nav">
+                <a href="#slide1"></a>
+                <a href="#slide2"></a>
+                <a href="#slide3"></a>
+                <a href="#slide4"></a>
+                <a href="#slide5"></a>
+                <a href="#slide6"></a>
+            </div>
+        </div>
+    </section>
+    <!-- POSTER -->
+
+    <!-- SHOWING MOVIES -->
+    <section class="movies">
+        <h1 class="section-title"> NOW SHOWING IN CINEMAS</h1>
+        <!-- <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button> -->
+
+        <div class="movies-container">
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 1 </span>
+                    <img src="images/movie6.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title"> CHAINSAW MAN - THE MOVIE: REZE ARC </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 2 </span>
+                    <img src="images/movie2.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title"> DIA BUKAN IBU </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 3 </span>
+                    <img src="images/movie3.jpeg" class="movies-thumb" alt="">
+                </div>
+                <div class="movies-title">
+                    <h3 class="title"> KANG SOLAH FROM KANG MAK MAK X NENEK GAYUNG </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 4 </span>
+                    <img src="images/movie12.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title"> SUKMA </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 5 </span>
+                    <img src="images/movie13.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title">DILANJUTKAN SALAH DISUDAHI PERIH </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 6 </span>
+                    <img src="images/movie5.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title"> ONE BATTLE AFTER ANOTHER </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 7 </span>
+                    <img src="images/movie11.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title"> JADI TUH BARANG </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 8 </span>
+                    <img src="images/movie4.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title"> THE CONJURING: LAST RITES </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 9 </span>
+                    <img src="images/movie7.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title"> GEREJA SETAN </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 10 </span>
+                    <img src="images/movie8.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title"> THE SHADOWS EDGE </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 11 </span>
+                    <img src="images/movie1.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title"> ANDAI IBU TIDAK MENIKAH DENGAN AYAH </h3>
+                </div>
+            </div>
+
+            <div class="movies-card">
+                <div class="movies-image">
+                    <span class="num"> 12 </span>
+                    <img src="images/movie9.jpeg" class="movies-thumb" alt="">
+                </div>
+
+                <div class="movies-title">
+                    <h3 class="title"> SORE ISTRI DARI MASA DEPAN </h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- SHOWING MOVIES -->
+
+    <!-- MOVIE NEWS -->
+    <section class="news">
+        <h1 class="movie-news"> MOVIE NEWS </h1>
+        <div class="container-news">
+            <div class="box-news">
+                <img src="images/news1.jpg" alt="">
+                <div>
+                    <p>
+                        <span>Tayang Terlebih Dahulu di Amerika Serikat, Dia Bukan Ibu Sedang Tayang</span><br>
+                        Film horor Indonesia “Dia Bukan Ibu” dijadwalkan rilis serentak di bioskop pada 25 September 2025. 
+                        Film ini menarik perhatian besar karena diadaptasi dari kisah nyata dan sebuah thread horor yang sempat viral
+                        di media sosial X (dulu Twitter) dengan tagar Jeropoint, yang telah dibaca jutaan kali. 
+                    </p>
+                </div>
+            </div>
+            <div class="box-news">
+                <img src="images/news2.jpeg" alt="">
+                <div>
+                    <p>
+                        <span>Jadi Tuh Barang, Kisah Unik Tentang Kerjaan Pawang Hujan</span><br>
+                        Industri film Indonesia kembali menghadirkan tawa sekaligus kritik sosial lewat film komedi terbaru, 
+                        “Jadi Tuh Barang”, yang kini sedang tayang di bioskop. Diproduksi oleh eKOMIK Pictures dan disutradarai oleh Kemal Palevi, 
+                        film ini menjadi cermin bagi realita sulitnya mencari pekerjaan dan tekanan hidup yang dihadapi oleh generasi muda saat ini. 
+                    </p>
+                </div>
+            </div>
+            <div class="box-news">
+                <img src="images/news3.jpeg" alt="">
+                <div>
+                    <p>
+                        <span>Film Sukma Garapan Baim Wong, Disebut Penonton Horor Yang Fresh!</span><br>
+                        Sedang tayang, ada film horor Indonesia terbaru berjudul Sukma siap menyajikan pengalaman sinematik yang berbeda. 
+                        Film ini tidak hanya mengeksplorasi elemen-elemen horor, tetapi juga mengangkat isu-isu sosial dan psikologis yang sering
+                        terjadi di masyarakat.  
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- MOVIE NEWS -->
+  </main>
+
+  <section class="about-tiketflix">
+        <h1>About <span>TiketFlix</span></h1>
+        <div class="content">
+            <p>
+                <span>TiketFlix</span> is a pioneering digital platform dedicated to making every journey, great or small, effortlessly
+                accessible. We combine the seamless, rapid booking technology used for cinematic entertainment with the vast 
+                network of intercity bus travel, creating one unified application for two essential needs. Our mission is to transform 
+                the hassle of ticket purchasing into a moment of anticipation, allowing you to instantly secure your next bus seat or movie ticket
+                with unmatched simplicity, transparency, and reliability, putting the power to plan your mobility and leisure right in the palm of your hand.
+            </p>
+        </div>
+
+        <div class="contact-us">
+        <h2>Connect With Us</h2>
+        <div class="contact-links">
+            <a href="tel:+1234567890" class="contact-link phone">
+                <i class="fas fa-phone"></i>
+                <span>(123) 456-7890</span>
+            </a>
+            <a href="https://www.instagram.com/tiketflix_official" target="_blank" class="contact-link instagram">
+                <i class="fab fa-instagram"></i>
+                <span>@TiketFlix_Official</span>
+            </a>
+            <a href="https://twitter.com/TiketFlix_ID" target="_blank" class="contact-link twitter">
+                <i class="fab fa-twitter"></i>
+                <span>@TiketFlix_ID</span>
+            </a>
+        </div>
+    </div>
+    </section>
+  
+@endslot
+
+@end

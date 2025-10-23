@@ -1,0 +1,382 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Padding", sans-serif;
+}
+
+/* NAVIGATION */
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 7px;
+}
+
+.logo img{
+    width: 35%;
+    margin-left: 100px;
+    height: auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .menu{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu li{
+    list-style: none;
+}
+
+.navbar .menu li a{
+    margin-right: 65px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #103138;
+    text-decoration: none;
+}
+
+.navbar .menu button{
+    background-color: white;
+    margin-right: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px;
+}
+
+.navbar .menu button a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* NAVIGATION */
+
+/* PROMO */
+
+.slider-wrapper{
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16 \ 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img{
+    width: 100%;;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 100%;
+}
+
+/* PROMO */
+
+
+/* SHOWING MOVIES */
+
+.movies{
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.section-title{
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.movies-container{
+  display: flex;
+  padding: 0 10vw;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.movies-container::-webkit-scrollbar{
+  display: none;
+}
+
+.movies-card{
+  flex: 0 0 auto;
+  width: 250px;
+  height: 450px;
+  margin-right: 40px;
+}
+
+.movies-image{
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.movies-thumb{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.num{
+  position: absolute;
+  background: grey;
+  padding: 5px;
+  border-radius: 5px;
+  color: #103138;
+  right: 10px;
+  top: 10px;
+}
+
+.movies-title{
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.pre-btn, .nxt-btn{
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white);
+    cursor: pointer;
+    z-index: 9;
+}
+
+.pre-btn{
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-btn{
+    right: 0;
+}
+
+.pre-btn img, .nxt-btn img{
+    opacity: 0.2;
+    width: 20px;
+}
+
+.pre-btn:hover img, .nxt-btn:hover img{
+    opacity: 1;
+}
+
+/* SHOWING MOVIES */
+
+
+/* MOVIE NEWS */
+
+.news{
+    background-color: #103138;
+    padding: 50px;
+    color: #ffffff;
+}
+
+.movie-news{
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 100px;
+  color: white;
+}
+
+.box-news{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 150px;
+    margin-right: 500px;
+    align-items: center;
+    gap: 0px;
+}
+
+.box-news img{
+    width: 250px;
+    padding: 0;
+    background-color: #318391;
+    /* border: 1px solid white; */
+    border-radius: 10px;
+    margin-left: 170px;
+}
+
+.box-news p{
+    font: 500;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.box-news p span{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* MOVIE NEWS */
+
+.about-tiketflix {
+    /* Sets the width and centers the content horizontally if the container is less than 100% wide */
+    width: 90%; 
+    max-width: 1200px; /* Optional: Limits the max width on very large screens */
+    margin: 0 auto; /* Centers the whole section on the page */
+    padding: 20vh;
+    text-align: center; /* This will center block-level children (like h1) and inline content */
+}
+
+/* Styling the Title */
+.about-tiketflix h1 {
+    /* Ensures the title is at the top of the section */
+    margin-top: 0; 
+    margin-bottom: 20px; /* Adds space between the title and the content */
+    font-size: 2.5em; 
+    color: #333;
+}
+
+/* Styling the Content wrapper */
+.about-tiketflix .content {
+    /* Ensures the content container is centered (if needed, though text-align on parent usually suffices) */
+    width: 100%; 
+    display: flex;
+    justify-content: center; /* Centers the child paragraph block within this div */
+}
+
+/* Styling the Paragraph for readability and centering its text */
+.about-tiketflix .content p {
+    /* Constrains the line length for better readability */
+    max-width: 800px; 
+    text-align: justify; /* Aligns text left and right within the paragraph block */
+    margin: 0 auto; /* Centers the paragraph block within its parent .content */
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Styling the span for the brand name highlight (optional, based on your HTML) */
+.about-tiketflix h1 span {
+    color: #103138;
+    font-weight: bold; /* Example brand color */
+}
+
+.content span{
+    color: #103138;
+    font-weight: bold;
+}
+
+.contact-us {
+    margin-top: 40px; /* Space above the contact section */
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Subtle separator line */
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex; /* Arranges the links side-by-side */
+    justify-content: center; /* Centers the group of links */
+    gap: 30px; /* Space between the links */
+    flex-wrap: wrap; /* Allows links to wrap on smaller screens */
+}
+
+.contact-link {
+    text-decoration: none; /* Removes the underline from links */
+    color: #555;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.contact-link i {
+    font-size: 1.4em;
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Hover effects for a professional look */
+.contact-link:hover {
+    color: #FF6B6B; /* A common hover color or your brand color */
+}
+
+/* Optional: Specific colors for social media icons */
+.contact-link.instagram i {
+    color: #E1306C; /* Instagram's signature color */
+}
+
+.contact-link.twitter i {
+    color: #1DA1F2; /* Twitter's signature color */
+}
+
+.contact-link.phone i {
+    color: #28A745; /* A common color for phone/success */
+}
+
+
+footer{
+    background-color: #103138;
+    justify-content: space-between;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+footer span{
+    font-weight: bold;
+}
+
+footer .sosial{
+    display: flex;
+    gap: 20px;
+}
+
+footer .sosial a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}

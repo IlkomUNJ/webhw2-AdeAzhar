@@ -1,0 +1,317 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Padding", sans-serif;
+}
+
+/* NAVIGATION */
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 7px;
+}
+
+.logo img{
+    width: 35%;
+    margin-left: 100px;
+    height: auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .menu{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu li{
+    list-style: none;
+}
+
+.navbar .menu li a{
+    margin-right: 65px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #103138;
+    text-decoration: none;
+}
+
+.navbar .menu button{
+    background-color: white;
+    margin-right: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px;
+}
+
+.navbar .menu button a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* NAVIGATION */
+
+/* BOOKING */
+
+.container-booking {
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-booking h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(52, 52, 52);
+}
+
+
+.booking-card {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    gap: 20px; 
+}
+
+.booking-card img {
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 4px;
+    width: 20%;
+}
+
+
+.title-movie{
+    flex-grow: 1; 
+}
+
+.title-movie h3{
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 1.2em;
+}
+
+.title-movie span{
+    color: rgb(131, 131, 131);
+    font-weight: bold;
+}
+
+.title-movie p{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: #103138;
+    font-weight: bold;
+}
+
+.jam-tayang {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.jam-tayang a {
+    border: 1px solid #103138; 
+    color: #103138; 
+    text-decoration: none; 
+    padding: 5px 10px;
+    border-radius: 4px; 
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Efek hover opsional */
+.jam-tayang a:hover {
+    background-color: #103138;
+    color: white;
+}
+/* BOOKING */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    /* KEY FIX: Hide by default, will be set to 'flex' by JS */
+    display: none; 
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-height: 90vh; /* Ensures it fits on smaller screens */
+    overflow-y: auto; /* Allows scrolling if content is too tall */
+}
+
+/* Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    position: sticky; /* Keep header visible on scroll */
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.header-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Movie Info */
+.movie-info-container {
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.poster-image {
+    width: 80px;
+    height: 115px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.movie-title-large {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.movie-meta, .cinema-location, .seats-info {
+    font-size: 14px;
+    color: #666;
+    margin: 3px 0;
+}
+
+/* Terms and Conditions (S&K) */
+.terms-conditions {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.terms-conditions h3 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.terms-conditions ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+}
+
+/* Ticket Selector */
+.ticket-selector-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.selector-label {
+    font-weight: bold;
+}
+
+.seat-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selector-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.seat-count {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Footer (Continue Button) */
+.modal-footer {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    position: sticky; /* Keep footer visible on scroll */
+    bottom: 0;
+    background: white;
+    z-index: 10;
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* FOOTER */
+footer{
+    background-color: #103138;
+    justify-content: space-between;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+footer span{
+    font-weight: bold;
+}
+
+footer .sosial{
+    display: flex;
+    gap: 20px;
+}
+
+footer .sosial a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+/* FOOTER */

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <title>TiketFlix - Seats</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="resources/css/style4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+<body>
+
+    <div class="cinema-container">
+        <h2 class="seat-selection-title">Select Your Seats</h2> 
+
+        <div class="screen-area">
+            <div class="screen"></div>
+            <p class="screen-label">Screen</p>
+        </div>
+
+        <div class="seats-grid">
+            <div class="row">
+                <span class="row-label">A</span>
+                <div class="seat available" data-seat="A1"></div>
+                <div class="seat available" data-seat="A2"></div>
+                <div class="seat available" data-seat="A3"></div>
+                <div class="seat available" data-seat="A4"></div>
+                <div class="seat available" data-seat="A5"></div>
+                <div class="seat occupied" data-seat="A6"></div>
+            </div>
+            <div class="row">
+                <span class="row-label">B</span>
+                <div class="seat available" data-seat="B1"></div>
+                <div class="seat available" data-seat="B2"></div>
+                <div class="seat available" data-seat="B3"></div>
+                <div class="seat available" data-seat="B4"></div>
+                <div class="seat occupied" data-seat="B5"></div>
+                <div class="seat occupied" data-seat="B6"></div>
+            </div>
+            <div class="row">
+                <span class="row-label">C</span>
+                <div class="seat available" data-seat="C1"></div>
+                <div class="seat available" data-seat="C2"></div>
+                <div class="seat available" data-seat="C3"></div>
+                <div class="seat available" data-seat="C4"></div>
+                <div class="seat available" data-seat="C5"></div>
+                <div class="seat available" data-seat="C6"></div>
+            </div>
+            <div class="row">
+                <span class="row-label">D</span>
+                <div class="seat available" data-seat="D1"></div>
+                <div class="seat available" data-seat="D2"></div>
+                <div class="seat available" data-seat="D3"></div>
+                <div class="seat available" data-seat="D4"></div>
+                <div class="seat available" data-seat="D5"></div>
+                <div class="seat available" data-seat="D6"></div>
+            </div>
+            <div class="row">
+                <span class="row-label">E</span>
+                <div class="seat available" data-seat="E1"></div>
+                <div class="seat available" data-seat="E2"></div>
+                <div class="seat available" data-seat="E3"></div>
+                <div class="seat available" data-seat="E4"></div>
+                <div class="seat available" data-seat="E5"></div>
+                <div class="seat available" data-seat="E6"></div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="seat available"></div>
+                <span>Available</span>
+            </div>
+            <div class="legend-item">
+                <div class="seat selected"></div>
+                <span>Selected</span>
+            </div>
+            <div class="legend-item">
+                <div class="seat occupied"></div>
+                <span>Occupied</span>
+            </div>
+        </div>
+        
+        <!-- NEW: Back Button placed under the UI -->
+        <div class="seat-action-footer">
+            <!-- This button takes the user back to index.html -->
+            <a href="/" class="action-btn back-to-index-btn">&larr; Go Back to Booking Summary</a>
+        </div>
+    </div>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Select ALL seats, excluding 'occupied' ones
+        const seats = document.querySelectorAll('.seat:not(.occupied)'); 
+        
+        // Function to handle seat selection/deselection
+        seats.forEach(seat => {
+            seat.addEventListener('click', function() {
+                const isSelected = this.classList.contains('selected');
+
+                if (isSelected) {
+                    // DESELECTING: Remove 'selected' and add 'available' back
+                    this.classList.remove('selected');
+                    this.classList.add('available');
+                } else {
+                    // SELECTING: Remove 'available' and add 'selected'
+                    this.classList.remove('available');
+                    this.classList.add('selected');
+                }
+                
+                updateSelectedCount(); // Track the total selected seats
+            });
+        });
+
+        // Optional function to track the number of selected seats
+        function updateSelectedCount() {
+            const selectedSeats = document.querySelectorAll('.seat.selected');
+            const selectedSeatsData = Array.from(selectedSeats).map(seat => seat.dataset.seat);
+            
+            console.log(`Total seats selected: ${selectedSeats.length}`);
+            console.log('Selected seat IDs:', selectedSeatsData);
+        }
+    });
+    </script>
+
+</body>
+</html>

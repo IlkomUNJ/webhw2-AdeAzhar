@@ -1,0 +1,184 @@
+body {
+    font-family: "Padding", sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically on the screen */
+    min-height: 100vh; /* Takes up the full height of the viewport */
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 40px; /* Increased padding for desktop spacing */
+    box-sizing: border-box;
+}
+
+.cinema-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    width: 90%;
+    max-width: 800px; /* Desktop width */
+    text-align: center;
+    position: relative;
+}
+
+/* Centered Title */
+.seat-selection-title {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+}
+
+/* --- Screen Area --- */
+.screen-area {
+    margin-bottom: 40px;
+}
+
+.screen {
+    background-color: #333;
+    height: 80px; 
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 0 0 50% 50%; 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-top: 5px solid #555;
+    transform: perspective(1000px) rotateX(-20deg); 
+}
+
+.screen-label {
+    color: #444;
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* --- Seats Grid --- */
+.seats-grid {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+}
+
+.row-label {
+    font-weight: bold;
+    font-size: 1em;
+    color: #555;
+    min-width: 25px;
+    text-align: right;
+    margin-right: 15px;
+}
+
+/* --- Seat Styling and States --- */
+.seat {
+    width: 40px; 
+    height: 35px;
+    border-radius: 6px 6px 3px 3px; 
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: white; 
+}
+
+.seat.available {
+    background-color: #e0e6ed; /* Light color for available */
+    border-color: #c9d2de;
+}
+
+.seat.available:hover {
+    background-color: #a4c9eb;
+    border-color: #79ace4;
+    transform: scale(1.1);
+}
+
+/* SELECTED Seat (The change when user clicks) */
+.seat.selected {
+    background-color: #28a745; /* Green color for selected */
+    border-color: #1e7e34;
+    cursor: pointer; 
+}
+
+.seat.selected:hover {
+    background-color: #1e7e34; 
+    border-color: #1e7e34;
+    transform: scale(1.1);
+}
+
+.seat.occupied {
+    background-color: #888; /* Grey for occupied */
+    border-color: #777;
+    cursor: not-allowed;
+    pointer-events: none; /* Prevents interaction */
+}
+
+/* --- Legend --- */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.legend-item .seat {
+    width: 25px;
+    height: 22px;
+    cursor: default;
+    margin: 0;
+}
+
+/* --- New Action Footer & Back Button Style --- */
+.seat-action-footer {
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.action-btn {
+    /* Style anchor tag as a button */
+    display: block;
+    width: 100%;
+    max-width: 300px; /* Constrain button width */
+    margin: 0 auto; /* Center the button */
+    padding: 12px 20px;
+    
+    background-color: #f0f0f5; /* Light grey background */
+    color: #444; /* Dark text color */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.action-btn:hover {
+    background-color: #e0e0e5;
+    color: #007bff; /* Blue text on hover */
+    border-color: #007bff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+

@@ -1,0 +1,97 @@
+@layout.app ({title: 'TikerFlix - Booking'})
+
+@slot('meta')
+  @vite('resources/css/style1.css')
+@endslot
+@slot('meta')
+  @vite('resources/js/app.js')
+@endslot
+
+
+
+
+@slot('main')
+     <!-- BOOKING -->
+    <section class="container-booking">
+        <h1>Booking Ticket</h1>
+        <div class="booking-card">
+            <img src="images/movie6.jpeg" alt="Poster Film">
+            <div class="title-movie">
+                <h3>CHAINSAW MAN - THE MOVIE: REZE ARC</h3>
+                <span>1h 40m</span>
+                <p>Rp30.000</p>
+                <div class="jam-tayang">
+                    <a href="#" class="showtime-link">12:00</a>
+                    <a href="#" class="showtime-link">14:30</a>
+                    <a href="#" class="showtime-link">17:00</a>
+                </div>
+            </div>
+        </div>
+        <div class="booking-card">
+            <img src="images/movie6.jpeg" alt="Poster Film">
+            <div class="title-movie">
+                <h3>CHAINSAW MAN - THE MOVIE: REZE ARC</h3>
+                <span>1h 40m</span>
+                <p>Rp30.000</p>
+                <div class="jam-tayang">
+                    <a href="#" class="showtime-link">12:00</a>
+                    <a href="#" class="showtime-link">14:30</a>
+                    <a href="#" class="showtime-link">17:00</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="overlay" id="bookingModal"> 
+    <div class="modal-content">
+        <header class="modal-header">
+            <span class="close-btn" id="closeBtn">&times;</span> 
+            <span class="header-title">Select Number of Tickets</span>
+        </header>
+
+        <div class="movie-info-container">
+            <div class="movie-poster">
+                <img src="images/movie6.jpeg" alt="Movie Poster" class="poster-image">
+            </div>
+            <div class="movie-details">
+                <h2 class="movie-title-large">CHAINSAW MAN - THE MOVIE: REZE ARC</h2>
+                <p class="movie-meta">
+                    <span class="movie-duration">1h 40m</span> |
+                    <span class="showtime-date">Tue, 14 Oct 2025</span>
+                </p>
+                <p class="cinema-location">
+                    <span class="cinema">Cinema</span> <span class="xxi">XXI</span> - <span class="showtime">18:55</span>
+                </p>
+                <p class="seats-info">
+                    <span class="seats-available">158 seats available</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="terms-conditions">
+            <h3>Terms & Conditions (S&K)</h3>
+            <ul>
+                <li>Your tickets **cannot be exchanged or refunded**.</li>
+                <li>You are required to buy tickets for **children 2 years old and above**.</li>
+                <li>Big Deals! **Zero admin fee** and **can buy more than 8 tickets** with "F&B purchase".</li>
+            </ul>
+        </div>
+
+        <div class="ticket-selector-container">
+            <p class="selector-label">How many seats needed?</p>
+            <div class="seat-selector">
+                <button class="selector-button minus-btn">–</button>
+                <span class="seat-count">1</span>
+                <button class="selector-button plus-btn">+</button>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button id="continueButton" class="continue-btn">Continue</button>
+        </div>
+        </div>
+    </div>
+    <!-- BOOKING -->
+@endslot
+    
+@end
